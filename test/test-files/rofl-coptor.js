@@ -1,0 +1,13 @@
+module.exports = () =>
+  `\
+
+   ROFL:ROFL:ROFL:ROFL
+         _^___
+ L    __/   [] \    
+LOL===__        \ 
+ L      \________]
+         I   I
+        --------/
+\
+`
+;

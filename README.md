@@ -1,6 +1,10 @@
-# Dependable [![Build Status](https://travis-ci.org/idottv/dependable.png)](https://travis-ci.org/idottv/dependable)
+# Dependable [![Build Status](https://travis-ci.org/addisonj/dependable.png)](https://travis-ci.org/addisonj/dependable)
 
-A minimalist dependency injection framework for node.js.
+A minimalist dependency injection framework for node.js, forked for es6
+
+WARNING: this is probably not the thing to use anymore. Go try electrolyte. This is a hack
+while I try and migrate some code away but still being able to do ES6 stuff
+
 
 ## Example
 
@@ -150,7 +154,7 @@ Sounds like a hit!
 
 ## Development
 
-Dependable is written in coffeescript. To generate javascript, run `npm run prepublish`.
+Dependable was written in coffeescript. The js here was generated use decaffinate, because coffeescript drives me bonkers
 
 Tests are written with mocha. To run the tests, run `npm test`.
 
