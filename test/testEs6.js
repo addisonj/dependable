@@ -65,6 +65,18 @@ describe('resolve es6', function () {
       })
     });
   });
+  it('correctly handles single line es6 function', function (done) {
+    container.resolve((foo) => done())
+  });
+  it('correctly handles single line es6 function with no parens', function (done) {
+    let cov_1whz2gwhsa = {
+      f: [0]
+    }
+    function fakeCb(something) {
+      something('beep')
+    }
+    container.resolve(foo=>{fakeCb(bar=>{++cov_1whz2gwhsa.f[0];let b = "what"; done()})})
+  });
 
 
 });
