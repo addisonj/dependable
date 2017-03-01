@@ -87,9 +87,9 @@ exports.container = function() {
   const getArgs = function(func) {
     const funcString = func.toString()
     // normal function syntax
-    let match = funcString.match(/function.*?\(([\s\S]*?)\)/);
+    let match = funcString.match(/\s*?^function.*?\(([\s\S]*?)\)/);
     // fat arrow syntax with parens
-    if (!match) match = funcString.match(/.*?\(([\s\S]*?)\).*?=>/);
+    if (!match) match = funcString.match(/^\s*?\(([\s\S]*?)\)\s*?=>/);
     if (!match) match = funcString.match(/.*?([\S]+).*?=>/);
     if (match == null) { throw new Error(`could not parse function arguments: ${(func != null ? func.toString() : undefined)}`); }
     return match;

@@ -43,4 +43,28 @@ describe('resolve es6', function () {
       done();
     });
   });
+  it('correctly handles nested es6 fat arrow', function (done) {
+    function fakeCb(something) {
+      something('beep')
+    }
+    container.resolve((foo) => {
+      assert.deepEqual(foo, {});
+      fakeCb((blah) => {
+        done();
+      })
+    });
+  });
+  it('correctly handles nested es6 with nornal function', function (done) {
+    function fakeCb(something) {
+      something('beep')
+    }
+    container.resolve((foo) => {
+      assert.deepEqual(foo, {});
+      fakeCb(function (blah) {
+        done();
+      })
+    });
+  });
+
+
 });

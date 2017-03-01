@@ -13,4 +13,14 @@ describe('resolve', function () {
       done();
     });
   });
+  it('correctly parses nested functions', function (done) {
+     function fakeCb(something) {
+       something('foo')
+     }
+    container.resolve(function(foo, bar, baz) {
+      fakeCb(function(res) {
+        done();
+      })
+    });
+  });
 });
